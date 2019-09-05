@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.FXMLTableViewController">
@@ -16,5 +17,13 @@
     </Label>
     <TableView fx:id="tableView" GridPane.columnIndex="0"
                GridPane.rowIndex="1">
+        <columns>
+            <TableColumn text="First Name">
+            </TableColumn>
+            <TableColumn text="Last Name">
+            </TableColumn>
+            <TableColumn text="Email Address">
+            </TableColumn>
+        </columns>
     </TableView>
 </GridPane>
