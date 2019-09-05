@@ -9,6 +9,9 @@
 <?import javafx.collections.FXCollections?>
 <?import fxmltableview.Person?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import fxmltableview.*?>
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.FXMLTableViewController">
@@ -21,7 +24,7 @@
     <TableView fx:id="tableView" GridPane.columnIndex="0"
                GridPane.rowIndex="1">
         <columns>
-            <TableColumn text="First Name">
+            <TableColumn fx:id="firstNameColumn" text="First Name">
                 <cellValueFactory><PropertyValueFactory property="firstName" />
                 </cellValueFactory>
             </TableColumn>
@@ -48,5 +51,8 @@
                         email="michael.brown@example.com"/>
             </FXCollections>
         </items>
+        <sortOrder>
+            <fx:reference source="firstNameColumn"/>
+        </sortOrder>
     </TableView>
 </GridPane>
