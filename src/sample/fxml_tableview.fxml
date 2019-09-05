@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import fxmltableview.Person?>
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.FXMLTableViewController">
@@ -25,5 +27,19 @@
             <TableColumn text="Email Address">
             </TableColumn>
         </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <Person firstName="Jacob" lastName="Smith"
+                        email="jacob.smith@example.com"/>
+                <Person firstName="Isabella" lastName="Johnson"
+                        email="isabella.johnson@example.com"/>
+                <Person firstName="Ethan" lastName="Williams"
+                        email="ethan.williams@example.com"/>
+                <Person firstName="Emma" lastName="Jones"
+                        email="emma.jones@example.com"/>
+                <Person firstName="Michael" lastName="Brown"
+                        email="michael.brown@example.com"/>
+            </FXCollections>
+        </items>
     </TableView>
 </GridPane>
