@@ -12,6 +12,7 @@
 <?import javafx.scene.control.cell.*?>
 <?import javafx.collections.*?>
 <?import fxmltableview.*?>
+<?import sample.FormattedTableCellFactory?>
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.FXMLTableViewController">
@@ -27,6 +28,10 @@
             <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="100">
                 <cellValueFactory><PropertyValueFactory property="firstName" />
                 </cellValueFactory>
+                <cellFactory>
+                    <FormattedTableCellFactory alignment="center">
+                    </FormattedTableCellFactory>
+                </cellFactory>
             </TableColumn>
             <TableColumn text="Last Name" prefWidth="100">
                 <cellValueFactory><PropertyValueFactory property="lastName" />
